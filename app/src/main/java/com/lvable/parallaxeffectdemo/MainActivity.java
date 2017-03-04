@@ -37,11 +37,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     public void onClick(View view) {
         Bundle bundle = new Bundle();
         bundle.putFloat(BundleKey.PARALLAX_SPEED, mSpeedVal);
-        if (view.getId() == R.id.btn_yahoo_effect){
+        if (view.getId() == R.id.btn_yahoo_effect) {
             Intent intent = new Intent(MainActivity.this, YahooParallaxActivity.class);
             intent.putExtra(BundleKey.TYPE_YAHOO, bundle);
             startActivity(intent);
-        }else if (view.getId() == R.id.btn_normal_effect){
+        } else if (view.getId() == R.id.btn_normal_effect) {
             Intent intent = new Intent(MainActivity.this, NormalParallaxActivity.class);
             bundle.putFloat(BundleKey.PARALLAX_DISTANCE, mDistanceVal);
             intent.putExtra(BundleKey.TYPE_NORMAL, bundle);
